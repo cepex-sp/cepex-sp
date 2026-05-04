@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CePEX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#020617;
+      color:white;
+      font-family:'Inter', sans-serif;
+      overflow-x:hidden;
+    }
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(2,6,23,0.8);
+      border-bottom:1px solid #1e293b;
+    }
+
+    .nav-container{
+      max-width:1300px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px;
+    }
+
+    .logo{
+      font-size:1.3rem;
+      font-weight:800;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+    }
+
+    .nav-links a{
+      color:white;
+      text-decoration:none;
+      transition:0.2s;
+    }
+
+    .nav-links a:hover{
+      color:#60a5fa;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+      url('assets/images/storm.jpg') center/cover;
+    }
+
+    .hero{
+      max-width:1000px;
+      padding:40px;
+    }
+
+    .hero h1{
+      font-size:5rem;
+      font-weight:800;
+      margin-bottom:25px;
+    }
+
+    .hero p{
+      font-size:1.3rem;
+      color:#cbd5e1;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:16px 35px;
+      background:#2563eb;
+      border-radius:12px;
+      text-decoration:none;
+      color:white;
+      font-weight:600;
+      transition:0.2s;
+    }
+
+    .btn:hover{
+      background:#1d4ed8;
+      transform:translateY(-3px);
+    }
+
+    section{
+      max-width:1300px;
+      margin:auto;
+      padding:100px 25px;
+    }
+
+    h2{
+      font-size:3rem;
+      margin-bottom:30px;
+    }
+
+    p{
+      color:#cbd5e1;
+      line-height:1.9;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:#0f172a;
+      border:1px solid #1e293b;
+      padding:35px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#2563eb;
+    }
+
+    .card img{
+      width:100%;
+      border-radius:15px;
+      margin-bottom:20px;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+      margin-bottom:100px;
+    }
+
+    .split img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:20px;
+      height:400px;
+      object-fit:cover;
+    }
+
+    .timeline{
+      border-left:3px solid #2563eb;
+      padding-left:30px;
+      margin-top:40px;
+    }
+
+    .timeline-item{
+      margin-bottom:40px;
+    }
+
+    footer{
+      padding:50px;
+      text-align:center;
+      border-top:1px solid #1e293b;
+      color:#94a3b8;
+      background:#01040f;
+    }
+
+    @media(max-width:900px){
+
+      .hero h1{
+        font-size:3rem;
+      }
+
+      .split{
+        grid-template-columns:1fr;
+      }
+
+      .gallery{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<nav>
+
+  <div class="nav-container">
+
+    <div class="logo">
+      CePEX
+    </div>
+
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#monitoramento">Monitoramento</a>
+      <a href="#roadmap">Roadmap</a>
+    </div>
+
+  </div>
+
+</nav>
+
+<header>
+
+  <div class="hero">
+
+    <h1>CePEX</h1>
+
+    <p>
+      Plataforma integrada para monitoramento,
+      análise e previsão de eventos meteorológicos extremos
+      utilizando Inteligência Artificial,
+      integração de dados meteorológicos
+      e visualização geoespacial.
+    </p>
+
+    <a
+      class="btn"
+      href="https://github.com/victorsntnfunesp/cepex-projetoradar"
+      target="_blank"
+    >
+      Acessar Repositório
+    </a>
+
+  </div>
+
+</header>
+
+<section id="sobre">
+
+  <div class="split">
+
+    <img src="assets/images/fapesp.jpg">
+
+    <div>
+
+      <h2>FAPESP</h2>
+
+      <p>
+        O CePEX está inserido no contexto
+        dos Centros de Ciência para o Desenvolvimento (CCD),
+        iniciativa financiada pela FAPESP em conjunto com
+        a Defesa Civil do Estado de São Paulo, voltada
+        ao desenvolvimento científico e tecnológico
+        para enfrentamento de desafios estratégicos do Estado.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="split">
+
+    <div>
+
+      <h2>UNESP e CePEX</h2>
+
+      <p>
+        O Centro Paulista de integração de dados
+        para monitoramento de Eventos eXtremos (CePEX)
+        terá sede na UNESP e atuará na integração
+        de múltiplas fontes de dados meteorológicos,
+        ambientais e operacionais.
+      </p>
+
+      <br>
+
+      <p>
+        A proposta busca utilizar modelos analíticos,
+        Inteligência Artificial e aprendizado profundo
+        para antecipar cenários críticos envolvendo:
+      </p>
+
+      <br>
+
+      <p>
+        • Tempestades severas<br>
+        • Alagamentos<br>
+        • Deslizamentos<br>
+        • Períodos de estiagens<br>
+        • Extremos hidrológicos
+        • Monitoramento de raios
+      </p>
+
+    </div>
+
+    <img src="assets/images/unesp.jpg">
+
+  </div>
+
+</section>
+
+<section id="objetivos">
+
+  <h2>Objetivos do Projeto</h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>Integração de Dados</h3>
+
+      <p>
+        Centralização de informações provenientes
+        de radares meteorológicos,
+        sensores ambientais,
+        APIs institucionais
+        e imagens de satélite.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Inteligência Artificial</h3>
+
+      <p>
+        Desenvolvimento de modelos utilizando
+        Deep Learning,
+        CNNs,
+        RNNs,
+        Modelos Fundacionais
+        e análise espaço-temporal.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Visualização Geoespacial</h3>
+
+      <p>
+        Plataforma integrada para consultas,
+        sobreposição de camadas,
+        dashboards
+        e análise operacional.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="tecnologias">
+
+  <h2>Tecnologias</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Backend</h3>
+      <p>Python, Kafka, APIs REST, ETL e processamento distribuído.</p>
+    </div>
+
+    <div class="card">
+      <h3>Banco de Dados</h3>
+      <p>PostgreSQL, PostGIS e MySQL.</p>
+    </div>
+
+    <div class="card">
+      <h3>Frontend</h3>
+      <p>React, ArcGIS e dashboards interativos.</p>
+    </div>
+
+    <div class="card">
+      <h3>IA</h3>
+      <p>PyTorch, TensorFlow, aprendizado profundo e Modelos Fundacionais.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="monitoramento">
+
+  <h2>Defesa Civil e Operações</h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <img src="assets/images/defesa.jpg">
+
+      <h3>Integração Operacional</h3>
+
+      <p>
+        O projeto prevê integração com sistemas
+        da Defesa Civil,
+        permitindo apoio à tomada de decisão,
+        monitoramento centralizado
+        e visualização operacional.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <img src="assets/images/defesa2.jpg">
+
+      <h3>Eventos Extremos</h3>
+
+      <p>
+        Modelos analíticos e IA serão utilizados
+        para antecipação de eventos extremos
+        e mitigação de riscos ambientais.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Visualização e Dados</h2>
+
+  <p>
+    A base de dados utilizada inicialmente no projeto está disponível no repositório
+    <a
+      href="https://github.com/rafaepires/IPMet-Radar-Dataset/tree/main"
+      target="_blank"
+      style="color:#60a5fa;"
+    >
+      IPMet Radar Dataset
+    </a>.
+  </p>
+
+  <div class="gallery">
+
+    <img src="assets/images/radar.jpg">
+    <img src="assets/images/mapa.jpg">
+
+  </div>
+
+</section>
+
+<section id="roadmap">
+
+  <h2>Roadmap</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>Integração de APIs e radares</h3>
+      <p>Coleta e centralização de múltiplas fontes.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Arquitetura ETL</h3>
+      <p>Processamento e organização geoespacial dos dados.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Modelos de IA e Modelos Fundacionais</h3>
+      <p>Predição e análise de eventos extremos.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Plataforma operacional</h3>
+      <p>Visualização integrada para analistas e gestores.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    CePEX • UNESP • FAPESP • Defesa Civil do Estado de São Paulo
+  </p>
+
+</footer>
+
+</body>
+</html>
