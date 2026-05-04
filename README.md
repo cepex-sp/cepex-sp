@@ -8,7 +8,7 @@
 
 Sistema integrado para monitoramento, análise e visualização de eventos meteorológicos extremos, utilizando múltiplas fontes de dados, arquitetura computacional escalável e técnicas avançadas de Inteligência Artificial para apoio à tomada de decisão.
 
-## Site do Projeto: https://cepex-sp.github.io/cepex-sp/
+**Site do Projeto:** https://cepex-sp.github.io/cepex-sp/
 
 ---
 
