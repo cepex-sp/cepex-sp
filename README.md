@@ -1,4 +1,4 @@
-# CePEX
+# CePEX - Centro Paulista de integração de dados para monitoramento de Eventos eXtremos
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
