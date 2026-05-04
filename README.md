@@ -104,7 +104,7 @@ Fontes previstas e em estudo para integração:
 - APIs meteorológicas
 - Redes de radares meteorológicos
 
-Base de dados utilizada inicialmente:
+## Bases de dados disponíveis:
 
 - [IPMet Radar Dataset](https://github.com/rafaepires/IPMet-Radar-Dataset/tree/main)
 
@@ -184,11 +184,10 @@ Projeto em fase de estruturação arquitetural, levantamento técnico das fontes
 
 Victor Hugo Santana Felix & Juliana da Costa Feitosa
 
-# Orientadores Principais:
+# Pesquisadores Principais:
 
 - João Paulo Papa (https://bv.fapesp.br/pt/pesquisador/3113/joao-paulo-papa/)
 - Rogério Galante Negri (https://bv.fapesp.br/pt/pesquisador/64752/rogerio-galante-negri/)
-- Kelton Augusto Pontara da Costa (https://bv.fapesp.br/pt/pesquisador/666459/kelton-augusto-pontara-da-costa/)
 
 
 Projeto voltado a estudos e desenvolvimento em monitoramento meteorológico, integração de dados, inteligência artificial e apoio à gestão de eventos extremos.
